@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block titulo %}Central de contorno — {{ app_nome }}{% endblock %}
+{% block bodyattrs %}data-poll-ms="{{ poll_ms }}" data-titulo="Central de contorno"{% endblock %}
+{% block corpo %}
+<header class="topo">
+  <img src="/static/img/logo.png" alt="TLP">
+  <div class="titulo">Central de contorno</div>
+  <div class="quem">{{ usuario.nome }}</div>
+  <form method="post" action="/logout"><button class="btn-sair" type="submit">Sair</button></form>
+</header>
+<section class="resumo-central" id="resumo"></section>
+<main class="central">
+  <aside class="fila" id="fila"></aside>
+  <section class="detalhe" id="detalhe"><div class="card vazio">Selecione um pedido na fila.</div></section>
+</main>
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/comum.js"></script>
+<script src="/static/js/central.js"></script>
+{% endblock %}

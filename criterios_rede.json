@@ -1,0 +1,7 @@
+{
+  "latencia_ms":   {"bom": 80,  "minimo": 150},
+  "jitter_ms":     {"bom": 20,  "minimo": 40},
+  "perda_pct":     {"bom": 1,   "minimo": 3},
+  "download_mbps": {"bom": 30,  "minimo": 10},
+  "upload_mbps":   {"bom": 10,  "minimo": 3}
+}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block titulo %}Minhas atividades — {{ app_nome }}{% endblock %}
+{% block bodyattrs %}data-poll-ms="{{ poll_ms }}"{% endblock %}
+{% block corpo %}
+<header class="topo">
+  <img src="/static/img/logo.png" alt="TLP">
+  <div class="titulo">Minhas atividades</div>
+  <div class="quem">{{ usuario.nome }}</div>
+  <form method="post" action="/logout"><button class="btn-sair" type="submit">Sair</button></form>
+</header>
+<main class="conteudo">
+  <div class="barra-periodo" id="barra-periodo">
+    <button data-p="hoje" class="ativo">Hoje</button>
+    <button data-p="7d">7 dias</button>
+    <button data-p="mes">Mês</button>
+  </div>
+  <section class="kpis" id="kpis"></section>
+  <section class="lista-os" id="lista"></section>
+</main>
+<div id="overlay" class="overlay oculto"><div class="folha" id="folha"></div></div>
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/comum.js"></script>
+<script src="/static/js/teste_rede.js"></script>
+<script src="/static/js/tecnico.js"></script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block titulo %}Entrar — {{ app_nome }}{% endblock %}
+{% block corpo %}
+<main class="pagina-login">
+  <form class="login-card" method="post" action="/login" autocomplete="on">
+    <img src="/static/img/logo.png" alt="TLP">
+    <h1>{{ app_nome }}</h1>
+    <p>Faça login para continuar</p>
+    <label for="login">Usuário</label>
+    <input id="login" name="login" type="text" autocomplete="username" autocapitalize="none" required autofocus>
+    <label for="senha">Senha</label>
+    <input id="senha" name="senha" type="password" autocomplete="current-password" required>
+    <button class="btn btn-bloco" type="submit">Entrar</button>
+    {% if erro %}<div class="erro-login" role="alert">{{ erro }}</div>{% endif %}
+  </form>
+</main>
+{% endblock %}

@@ -1,0 +1,9 @@
+.env
+env.yaml
+*.db
+__pycache__/
+.venv/
+tests/
+scripts/
+README.md
+.git/
